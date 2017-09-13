@@ -26,7 +26,12 @@
         };
     });
 
-  
+    var bouton = document.getElementById('addCom');
+    bouton.addEventListener('click', function() {
+      var valueName = document.getElementById("inpName").value;
+      var valueDesc = document.getElementById("inpDesc").value;
+      document.getElementById('tableauCom').innerHTML += "<tr><td>" + valueName + "</td><td>" + valueDesc + "</td></tr>";
+    })
 
 
     </script>
