@@ -2,6 +2,7 @@
 <html lang="fr" ng-app = "testApp">
   <head charset="utf-8">
     <title>Test Angular JS</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Bienvenue sur ma fiche de revision !</h1>
@@ -10,7 +11,7 @@
     <div ng-controller="contentController">
       <p>Entre une commande <input type="text" ng-model="name"/> puis sa definition <textarea ng-model="desc"></textarea> et clique sur le bouton <input type="button" value="Ajouter !" ng-click="addCommande()" /> pour l'ajouter a la liste.</p>
       <ul>
-        <li ng-repeat = "commande in list"><span class="nameCom">{{ commande.name }}</span> - <span class="descCom">{{ commande.desc }}</span></li>
+        <li ng-repeat = "commande in list"><span class="nameCom">{{ commande.name }}</span> : <span class="descCom">{{ commande.desc }}</span></li>
       </ul>
     </div>
 

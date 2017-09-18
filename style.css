@@ -1,0 +1,16 @@
+body {
+  font-family : arial;
+}
+
+ul {
+  list-style-type : none;
+}
+
+.nameCom {
+  font-weight : bold;
+  color : red;
+  font-size : 1.1em;
+}
+.descCom {
+  font-style : italic;
+}
