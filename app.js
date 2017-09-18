@@ -1,15 +1,11 @@
 var testApp = angular.module("testApp", []);
 testApp.controller('contentController', function($scope) {
 
-    var list = [];
-
     $scope.name = "";
     $scope.desc = "";
+    $scope.list = [];
 
     $scope.addCommande = function() {
-          list.push($scope.name, $scope.desc);
-          alert(list[0]);
-    }
-
-
+          $scope.list.push({ name: $scope.name, desc: $scope.desc});
+    };
 });
