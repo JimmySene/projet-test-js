@@ -8,32 +8,18 @@
     <p>Ceci est une page de test pour tester Angular JS.</p>
 
     <div ng-controller="contentController">
-      <p>Entre une commande <input type="text" id="inpName" ng-model="commande.name"/> puis sa definition <textarea id="inpDesc" ng-model="commande.desc"></textarea> et clique sur le bouton <input id ="addCom" type="button" value="Ajouter !" /> pour l'ajouter a la liste.</p>
+      <p>Entre une commande <input type="text" ng-model="name"/> puis sa definition <textarea ng-model="desc"></textarea> et clique sur le bouton <input type="button" value="Ajouter !" ng-click="addCommande()" /> pour l'ajouter a la liste.</p>
 
       <table id="tableauCom">
           <tr><th>Commande</th><th>Description</th></tr>
-          <tr><td>{{ commande.name }}</td><td>{{ commande.desc }}</td></tr>
+          <tr><td>{{ name }}</td><td>{{ desc }}</td></tr>
       </table>
+
+      <p ng-repeat = "commande in list">{{  }}</p>
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-    <script>
-    var testApp = angular.module("testApp", []);
-    testApp.controller('contentController', function($scope) {
-        $scope.commande = {
-            name: "",
-            desc: ""
-        };
-    });
-
-    var bouton = document.getElementById('addCom');
-    bouton.addEventListener('click', function() {
-      var valueName = document.getElementById("inpName").value;
-      var valueDesc = document.getElementById("inpDesc").value;
-      document.getElementById('tableauCom').innerHTML += "<tr><td>" + valueName + "</td><td>" + valueDesc + "</td></tr>";
-    })
-
-
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
