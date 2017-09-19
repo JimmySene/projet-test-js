@@ -1,12 +1,12 @@
 var testApp = angular.module("testApp", []);
-testApp.controller('contentController' , contentController);
+testApp.controller('contentController' , function($scope, $http) {
 
-function contentController() {
-    this.name = "";
-    this.desc = "";
-    this.list = [];
-  };
+  var url = "data.txt";
+  $http.get(url).then(function(response) {
+    $scope.list = response.data;
+  });
 
-contentController.prototype.addCommande = function() {
-    this.list.push({ name: this.name, desc: this.desc});
+  $scope.addCommande = function() {
+    $scope.list.push({name: $scope.name, desc: $scope.desc});
   };
+});

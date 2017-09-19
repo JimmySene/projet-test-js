@@ -1,0 +1,16 @@
+[
+	{
+		"name": "git add",
+		"desc": "Ajoute un fichier dans l'index"
+	},
+
+	{
+		"name": "git commit -m",
+		"desc": "Fait un commit et enregistre les modifications dans l'historique"
+	},
+
+	{
+		"name": "git log",
+		"desc": "Affiche l'historique des commits effectués"
+	}
+]
