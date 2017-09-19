@@ -1,11 +1,12 @@
 var testApp = angular.module("testApp", []);
-testApp.controller('contentController', function($scope) {
+testApp.controller('contentController' , contentController);
 
-    $scope.name = "";
-    $scope.desc = "";
-    $scope.list = [];
+function contentController() {
+    this.name = "";
+    this.desc = "";
+    this.list = [];
+  };
 
-    $scope.addCommande = function() {
-          $scope.list.push({ name: $scope.name, desc: $scope.desc});
-    };
-});
+contentController.prototype.addCommande = function() {
+    this.list.push({ name: this.name, desc: this.desc});
+  };

@@ -8,10 +8,10 @@
     <h1>Bienvenue sur ma fiche de revision !</h1>
     <p>Ceci est une page de test pour tester Angular JS.</p>
 
-    <div ng-controller="contentController">
-      <p>Entre une commande <input type="text" ng-model="name"/> puis sa definition <textarea ng-model="desc"></textarea> et clique sur le bouton <input type="button" value="Ajouter !" ng-click="addCommande()" /> pour l'ajouter a la liste.</p>
+    <div ng-controller="contentController as commande">
+      <p>Entre une commande <input type="text" ng-model="commande.name"/> puis sa definition <textarea ng-model="commande.desc"></textarea> et clique sur le bouton <input type="button" value="Ajouter !" ng-click="commande.addCommande()" /> pour l'ajouter a la liste.</p>
       <ul>
-        <li ng-repeat = "commande in list"><span class="nameCom">{{ commande.name }}</span> : <span class="descCom">{{ commande.desc }}</span></li>
+        <li ng-repeat = "com in commande.list"><span class="nameCom">{{ com.name }}</span> : <span class="descCom">{{ com.desc }}</span></li>
       </ul>
     </div>
 
