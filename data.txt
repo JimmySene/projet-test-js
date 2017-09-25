@@ -11,6 +11,6 @@
 
 	{
 		"name": "git log",
-		"desc": "Affiche l'historique des commits effectués"
+		"desc": "Affiche l'historique des commits effectuï¿½s"
 	}
 ]

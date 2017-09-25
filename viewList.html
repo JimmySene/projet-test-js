@@ -1,0 +1,6 @@
+<div id="viewList">
+  <p>Entre une commande <input type="text" ng-model="name"/> puis sa definition <textarea ng-model="desc"></textarea> et clique sur le bouton <input type="button" value="Ajouter !" ng-click="addCommande()" /> pour l'ajouter a la liste.</p>
+  <ul>
+    <li ng-repeat = "com in list"><a href=""><span class="nameCom">{{ com.name }}</span> : <span class="descCom">{{ com.desc }}</span></a></li>
+  </ul>
+</div>
