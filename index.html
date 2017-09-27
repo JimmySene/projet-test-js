@@ -9,6 +9,7 @@
     <script src="lib/angular/angular-route.js"></script>
 
     <script src="testApp.module.js"></script>
+    <script src="testApp.config.js"></script>
     <script src="commandes/commandes.module.js"></script>
     <script src="commandes/commandes.component.js"></script>
   </head>
@@ -16,6 +17,7 @@
     <h1>Application de TEST</h1>
     <p>Ceci est une page de test pour tester Angular JS.</p>
 
-    <commandes-list></commandes-list>
+    <div ng-view></div>
+
   </body>
 </html>
